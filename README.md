@@ -15,6 +15,8 @@ $ py main.py
 # How it looks
 ![Default image](https://i.imgur.com/nLOASdp.png)
 
+![Default image](https://i.gyazo.com/bf9e69a82b676775e4a90d6fc600079e.png)
+
 # Custom style (WIP)
 If you wanna give this a shot yourself just play around with the stylesheet.css in the css folder
 
