@@ -5,5 +5,8 @@ A Python based tool to check connections to multiple servers, GUI build with PyQ
 clone the project, install the requirements, run main.py in the root folder
 
 $ git clone https://github.com/Sain98/ConnectionTool
+
 $ pip install -r requirements.txt
+
 $ py main.py
+
