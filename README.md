@@ -1,6 +1,8 @@
 # ConnectionTool
 A Python based tool to check connections to multiple servers, GUI build with PyQt5
 
+Python version used: 3.7
+
 # Setting it up
 clone the project, install the requirements, run main.py in the root folder
 
