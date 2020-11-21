@@ -1,0 +1,56 @@
+QWidget {
+    background-color: rgb(0, 0, 0);
+    border: 1px solid rgb(199, 42, 160);
+    border-radius: 10px;
+}
+
+QTableView, QTableCornerButton::section {
+    background-color: rgb(61, 61, 61);
+    alternate-background-color: rgb(15, 15, 15);
+    color: rgb(199, 42, 160);
+    border-radius: 10px;
+}
+
+QHeaderView::section {
+    background-color: rgb(61, 61, 61);
+    color: rgb(199, 42, 160);
+    border-radius: 10px;
+}
+
+QPushButton {
+    color: rgb(199, 42, 160);
+    background-color: rgb(28, 28, 28);
+    font: bold;
+    border-radius: 5px;
+    padding: 5px;
+}
+QPushButton:pressed {
+    background-color: rgb(61, 61, 61);
+}
+
+QGroupBox {
+    color: rgb(199, 42, 160);
+    margin: 10px;
+    padding: 10px;
+    font: bold;
+}
+
+QLabel {
+    color: rgb(199, 42, 160);
+    border: 0px;
+}
+
+QLineEdit {
+    background-color: rgb(61, 61, 61);
+    border-radius: 5px;
+    color: rgb(199, 42, 160);
+    padding-left: 4px;
+}
+
+QCheckBox {
+    color: rgb(199, 42, 160);
+    border: 0px;
+}
+
+/** 199, 42, 160 - Pink/purple mix **/
+/** 61, 61, 61 - dark gray **/
