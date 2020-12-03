@@ -32,6 +32,7 @@ from PyQt5.QtGui import (
 from tool import (
     ConnectionChecker,
     ConfigHandler,
+    NotificationHandler,
     Constants as const
 )
 
@@ -46,6 +47,7 @@ logging.basicConfig(level=logging.DEBUG if const.DEBUG_MODE else logging.INFO,
 class ConnectionTool(QMainWindow):
     """
     Main window for the connection tool
+    Docs -> docs/tool.ConnectionTool.rst
     Handles all of the UI things
     """
     def __init__(self):
@@ -75,6 +77,9 @@ class ConnectionTool(QMainWindow):
         # The server list, updated through add_server_clicked()
         # Format: name: {url: str, port: int, web: bool}
         self.servers = {}
+
+        # The saved statuses for if the user uses notifications
+        self.saved_status = {}
 
         # Workers and assigned rows for the results
         # {name: {worker: workerObj, row: int}, ...}
@@ -562,6 +567,18 @@ class ConnectionTool(QMainWindow):
 
         # Not displaying this, unsure if needed, user can see this on the settings side aswell
         # self.server_list_status.setItem(row, 5, QStandardItem(response['is_web']))
+
+        # Check if notifications are enabled
+        if self.notify:
+            # Try to get previous server status
+            old_status = self.saved_status.get(server_name)
+            # Compare with current server status
+            # if value is None -> Server did not exist yet in saved_status
+            if old_status != response['status'] and old_status is not None:
+                NotificationHandler.notification(old_status, response['status'], server_name)
+                
+        # Save server status
+        self.saved_status[server_name] = response['status']
 
         # Worker finished, -1 from active_workers
         self.active_workers -= 1
