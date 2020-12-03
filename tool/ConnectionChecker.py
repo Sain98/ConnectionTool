@@ -81,7 +81,7 @@ class ConnectionWorker(QThread):
             status = "Offline"
             s_family = "None"
         except ConnectionRefusedError:
-            status = "Online/Refused"
+            status = "Refused"
             s_family = "Connection refused"
         except TimeoutError:
             status = "Unknown/Timed out"
