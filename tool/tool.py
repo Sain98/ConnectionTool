@@ -46,7 +46,6 @@ logging.basicConfig(level=logging.DEBUG if const.DEBUG_MODE else logging.INFO,
 class ConnectionTool(QMainWindow):
     """
     Main window for the connection tool
-    Docs -> docs/tool.ConnectionTool.rst
     Handles all of the UI things
     """
     def __init__(self):
